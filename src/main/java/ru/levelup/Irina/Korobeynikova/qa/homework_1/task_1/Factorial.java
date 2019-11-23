@@ -22,7 +22,7 @@ public class Factorial {
      * Результат вычисления выводится на экран
      * @param firstNumber первое число, тип double
      */
-    protected static void doFactorial(double firstNumber){
+    protected void doFactorial(double firstNumber){
 
         int firstN = (int)firstNumber;
         double resultOfFactorial = 1;

@@ -23,7 +23,7 @@ public class Multiplication {
      * @param firstNumber первое число, тип double
      * @param secondNumber  второе число, тип double
      */
-    protected static void doMultiplication(double firstNumber,
+    protected void doMultiplication(double firstNumber,
                                            double secondNumber){
         System.out.println(secondNumber * firstNumber);
     }

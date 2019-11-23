@@ -22,7 +22,7 @@ public class Addition {
      * @param firstNumber первое число, тип double
      * @param secondNumber  второе число, тип double
      */
-    protected static void doAddition(Double firstNumber, Double secondNumber){
+    protected void doAddition(Double firstNumber, Double secondNumber){
 
         System.out.println(firstNumber + secondNumber);
     }

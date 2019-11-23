@@ -23,7 +23,7 @@ public class Power {
      * @param firstNumber первое число, тип double(степень)
      * @param secondNumber второе число, тип double
      */
-    protected static void doPower(double firstNumber, double secondNumber){
+    protected void doPower(double firstNumber, double secondNumber){
 
         int firstN = (int)firstNumber;
         double resultOfPower = 1;

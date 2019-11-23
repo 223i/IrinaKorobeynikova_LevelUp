@@ -23,7 +23,7 @@ public class Subtraction {
      * @param firstNumber первое число, тип double
      * @param secondNumber  второе число, тип double
      */
-    protected static void doSubtraction(double firstNumber, double secondNumber){
+    protected void doSubtraction(double firstNumber, double secondNumber){
         System.out.println((int) firstNumber - (int) secondNumber);
     }
 }

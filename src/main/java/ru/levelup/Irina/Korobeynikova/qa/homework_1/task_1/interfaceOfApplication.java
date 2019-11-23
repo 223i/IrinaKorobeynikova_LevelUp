@@ -30,22 +30,28 @@ public class interfaceOfApplication {
 
         switch (methodName) {
         case addition:
-            Addition.doAddition(numbers[0], numbers[1]);
+            Addition addition = new Addition();
+            addition.doAddition(numbers[0], numbers[1]);
             break;
         case subtraction:
-            Subtraction.doSubtraction(numbers[0], numbers[1]);
+            Subtraction subtraction = new Subtraction();
+            subtraction.doSubtraction(numbers[0], numbers[1]);
             break;
         case multiplication:
-            Multiplication.doMultiplication(numbers[0], numbers[1]);
+            Multiplication multiplication = new Multiplication();
+            multiplication.doMultiplication(numbers[0], numbers[1]);
             break;
         case power:
-            Power.doPower(numbers[0], numbers[1]);
+            Power power = new Power();
+            power.doPower(numbers[0], numbers[1]);
             break;
         case fibonacci:
-            Fibonacci.doFibonacci(numbers[0]);
+            Fibonacci fibonacci = new Fibonacci();
+            fibonacci.doFibonacci(numbers[0]);
             break;
         case factorial:
-            Factorial.doFactorial(numbers[0]);
+            Factorial factorial = new Factorial();
+            factorial.doFactorial(numbers[0]);
             break;
         }
     }

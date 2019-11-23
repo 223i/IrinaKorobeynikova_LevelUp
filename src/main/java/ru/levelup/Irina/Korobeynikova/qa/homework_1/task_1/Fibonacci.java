@@ -28,10 +28,12 @@ public class Fibonacci {
      *  выводится на экран
      * @param firstNumber число, тип double
      */
-    protected static void doFibonacci(double firstNumber){
+    protected void doFibonacci(double firstNumber){
 
         int firstNumberCasted = (int)firstNumber;
-        System.out.println((double)countFibonacci(firstNumberCasted));
+//        System.out.println((double)countFibonacci(firstNumberCasted));
+        System.out.println((double)alternativeFibonacci(firstNumberCasted));
+
 
     }
 
@@ -41,17 +43,37 @@ public class Fibonacci {
      * Результат вычисления выводится возвращается пользователю.
      * @param firstN первое число, тип int
      */
-    private static double countFibonacci(int firstN){
+//    private double countFibonacci(int firstN){
+//        if (firstN == 0) {
+//            return firstN;
+//        }
+//        if (firstN == 1) {
+//            return firstN;
+//
+//        } else {
+//            results.add((int) (countFibonacci(firstN - 2) +
+//                    countFibonacci(firstN - 1)));
+//        }
+//        return results.get(results.size() - 1);
+//    }
+
+    private double alternativeFibonacci(int firstN){
+
         if (firstN == 0) {
             return firstN;
-        }
-        if (firstN == 1) {
-            return firstN;
+        } else{
+            int fib1 = 1;
+            int fib2 = 1;
+            int fib_sum;
+            int counter = 0;
 
-        } else {
-            results.add((int) (countFibonacci(firstN - 2) +
-                    countFibonacci(firstN - 1)));
+            while (counter < firstN - 2){
+                fib_sum = fib1 + fib2;
+                fib1 = fib2;
+                fib2 = fib_sum;
+                counter += 1;
+            }
+            return(fib2);
         }
-            return results.get(results.size() - 1);
     }
 }
