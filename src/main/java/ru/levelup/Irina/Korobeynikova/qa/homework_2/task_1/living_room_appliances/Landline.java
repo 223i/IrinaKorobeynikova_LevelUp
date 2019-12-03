@@ -40,7 +40,7 @@ public class Landline extends DomesticAppliance implements Screenable, PlugIntoO
      */
     @Override
     public void switchOn() {
-        if(workingStatus = false){
+        if(!workingStatus){
             workingStatus = !workingStatus;
         } else{
             System.out.println("Landline is already switched on");
@@ -54,7 +54,7 @@ public class Landline extends DomesticAppliance implements Screenable, PlugIntoO
      */
     @Override
     public void switchOff() {
-        if(workingStatus = true){
+        if(workingStatus){
             workingStatus = !workingStatus;
         } else{
             System.out.println("Landline is already switched off");
@@ -68,11 +68,7 @@ public class Landline extends DomesticAppliance implements Screenable, PlugIntoO
      */
     @Override
     public boolean hasScreen() {
-        if(amountOfButtons == 0) {
-            return true;
-        } else{
-            return false;
-        }
+        return amountOfButtons == 0;
     }
 
     /**

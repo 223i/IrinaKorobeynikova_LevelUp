@@ -39,7 +39,7 @@ public class BeardTrimmer extends DomesticAppliance implements Screenable {
      */
     @Override
     public void switchOn() {
-        if(workingStatus = false){
+        if(!workingStatus){
             workingStatus = !workingStatus;
         } else{
             System.out.println("BeardTrimmer is already switched on");
@@ -53,7 +53,7 @@ public class BeardTrimmer extends DomesticAppliance implements Screenable {
      */
     @Override
     public void switchOff() {
-        if(workingStatus = true){
+        if(workingStatus){
             workingStatus = !workingStatus;
         } else{
             System.out.println("BeardTrimmer is already switched off");

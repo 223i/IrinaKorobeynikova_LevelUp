@@ -41,7 +41,7 @@ public class Hairdryer extends DomesticAppliance implements Screenable, PlugInto
      */
     @Override
     public void switchOn() {
-        if(workingStatus = false){
+        if(!workingStatus){
             workingStatus = !workingStatus;
         } else{
             System.out.println("Hairdryer is already switched on");
@@ -55,7 +55,7 @@ public class Hairdryer extends DomesticAppliance implements Screenable, PlugInto
      */
     @Override
     public void switchOff() {
-        if(workingStatus = true){
+        if(workingStatus){
             workingStatus = !workingStatus;
         } else{
             System.out.println("Hairdryer is already switched off");

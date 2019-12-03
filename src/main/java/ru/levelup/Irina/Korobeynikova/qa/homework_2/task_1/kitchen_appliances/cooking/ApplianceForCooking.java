@@ -47,7 +47,7 @@ public class ApplianceForCooking extends DomesticAppliance {
      */
     @Override
     public void switchOn() {
-        if(workingStatus = false){
+        if(!workingStatus){
             workingStatus = !workingStatus;
         } else{
             System.out.println("Device is already switched on");
@@ -61,7 +61,7 @@ public class ApplianceForCooking extends DomesticAppliance {
      */
     @Override
     public void switchOff() {
-        if(workingStatus = true){
+        if(workingStatus){
             workingStatus = !workingStatus;
         } else{
             System.out.println("Device is already switched off");

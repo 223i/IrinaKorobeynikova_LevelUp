@@ -44,13 +44,13 @@ public class WorkWithClasses {
         ArrayList<DomesticAppliance> allDevices = createListOfDevicesWithRandomData();
         System.out.println("===========All devices =============");
         for(DomesticAppliance device : allDevices){
-            System.out.println(device.toString());
+            System.out.println(device);
         }
 
         System.out.println("===========Sorted devices based on brand =============");
         ArrayList<DomesticAppliance> sortedDevices = sortForDeviceBasedOnBrand(allDevices, "Bosh");
         for(DomesticAppliance device : sortedDevices){
-            System.out.println(device.toString());
+            System.out.println(device);
         }
 
         System.out.println("===========Summarised power of all devices=============");
@@ -90,9 +90,9 @@ public class WorkWithClasses {
             ArrayList<DomesticAppliance> allDevices, double weight, boolean
             workingStatus, double power ){
         for(DomesticAppliance device : allDevices) {
-            if (device.weight == weight && device.workingStatus == workingStatus
-                    && device.power == power) {
-                System.out.println(device.toString());
+            if (device.getWeight() == weight && device.isWorkingStatus() == workingStatus
+                    && device.getPower() == power) {
+                System.out.println(device);
             }
         }
     }
@@ -106,7 +106,7 @@ public class WorkWithClasses {
         double sumOfPower = 0;
 
         for(DomesticAppliance device : allDevices){
-            sumOfPower += device.power;
+            sumOfPower += device.getPower();
         }
         return sumOfPower;
     }
@@ -122,7 +122,7 @@ public class WorkWithClasses {
         ArrayList<DomesticAppliance> collectedDevices = new ArrayList<>();
 
         for(DomesticAppliance device : allDevices){
-            if(device.brand.equals(brand)){
+            if(device.getBrand().equals(brand)){
                 collectedDevices.add(device);
             }
         }

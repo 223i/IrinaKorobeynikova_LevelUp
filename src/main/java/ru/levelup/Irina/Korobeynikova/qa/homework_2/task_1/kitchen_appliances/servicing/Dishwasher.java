@@ -50,7 +50,7 @@ public class Dishwasher extends DomesticAppliance implements Screenable, PlugInt
      */
     @Override
     public void switchOn() {
-        if(workingStatus = false){
+        if(!workingStatus){
             workingStatus = !workingStatus;
         } else{
             System.out.println("Dishwasher is already switched on");
@@ -64,7 +64,7 @@ public class Dishwasher extends DomesticAppliance implements Screenable, PlugInt
      */
     @Override
     public void switchOff() {
-        if(workingStatus = true){
+        if(workingStatus){
             workingStatus = !workingStatus;
         } else{
             System.out.println("Dishwasher is already switched off");

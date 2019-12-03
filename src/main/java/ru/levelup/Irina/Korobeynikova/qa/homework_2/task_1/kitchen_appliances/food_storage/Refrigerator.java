@@ -52,7 +52,7 @@ public class Refrigerator extends DomesticAppliance implements Screenable, PlugI
      */
     @Override
     public void switchOn() {
-        if(workingStatus = false ){
+        if(!workingStatus){
             workingStatus = !workingStatus;
         } else{
             System.out.println("Refrigerator is already switched on");
@@ -66,7 +66,7 @@ public class Refrigerator extends DomesticAppliance implements Screenable, PlugI
      */
     @Override
     public void switchOff() {
-        if(workingStatus = true){
+        if(workingStatus){
             workingStatus = !workingStatus;
         } else{
             System.out.println("Refrigerator is already switched off");

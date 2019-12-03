@@ -51,8 +51,8 @@ public class AlarmClock extends DomesticAppliance implements Screenable {
      */
     @Override
     public void switchOn() {
-        if (typeOfAlarmClock.equals("electronic")) {
-            if (workingStatus = false ){
+        if ("electornic".equals(typeOfAlarmClock)) {
+            if (!workingStatus){
                 workingStatus = !workingStatus;
             }
         } else{
@@ -69,8 +69,8 @@ public class AlarmClock extends DomesticAppliance implements Screenable {
      */
     @Override
     public void switchOff() {
-        if (typeOfAlarmClock.equals("electronic")) {
-            if (workingStatus = true){
+        if ("electornic".equals(typeOfAlarmClock)) {
+            if (workingStatus){
                 workingStatus = !workingStatus;
             }
         } else{

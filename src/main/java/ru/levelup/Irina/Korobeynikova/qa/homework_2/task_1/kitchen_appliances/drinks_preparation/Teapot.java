@@ -38,7 +38,7 @@ public class Teapot extends DomesticAppliance implements WiFiable {
      */
     @Override
     public void switchOn() {
-        if(workingStatus = false){
+        if(!workingStatus){
             workingStatus = !workingStatus;
         } else{
             System.out.println("Teapot is already switched on");
@@ -52,7 +52,7 @@ public class Teapot extends DomesticAppliance implements WiFiable {
      */
     @Override
     public void switchOff() {
-        if(workingStatus = true){
+        if(workingStatus){
             workingStatus = !workingStatus;
         } else{
             System.out.println("Teapot is already switched off");

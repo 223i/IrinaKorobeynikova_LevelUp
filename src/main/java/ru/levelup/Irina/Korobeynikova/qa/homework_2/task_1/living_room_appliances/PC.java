@@ -47,7 +47,7 @@ public class PC extends DomesticAppliance implements Screenable, WiFiable, PlugI
      */
     @Override
     public void switchOn() {
-        if(workingStatus = false){
+        if(!workingStatus){
             workingStatus = !workingStatus;
         } else{
             System.out.println("PC is already switched on");
@@ -61,7 +61,7 @@ public class PC extends DomesticAppliance implements Screenable, WiFiable, PlugI
      */
     @Override
     public void switchOff() {
-        if(workingStatus = true){
+        if(workingStatus){
             workingStatus = !workingStatus;
         } else{
             System.out.println("PC is already switched off");

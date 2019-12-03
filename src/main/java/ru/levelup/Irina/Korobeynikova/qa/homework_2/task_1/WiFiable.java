@@ -17,7 +17,7 @@ public interface WiFiable {
 
     /** buttonForSwitchingOnWifi - кнопка, позволяющая
      *  включить WiFi*/
-    String buttonForSwitchingOnWifi = "Switch on WiFi connection";
+    String BUTTON_FOR_SWITCHING_ON_WIFI = "Switch on WiFi connection";
 
     /**
      * Метод connectWiFi позволяет включить WiFi на устройстве.
@@ -25,6 +25,6 @@ public interface WiFiable {
      * реализующих данный интерфейс
      */
     default void connectWiFi(){
-        System.out.println(buttonForSwitchingOnWifi + "is pressed." + "WiFi is connected");
+        System.out.println(BUTTON_FOR_SWITCHING_ON_WIFI + "is pressed." + "WiFi is connected");
     }
 }

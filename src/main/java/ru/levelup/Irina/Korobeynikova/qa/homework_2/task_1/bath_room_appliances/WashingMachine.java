@@ -59,7 +59,7 @@ public class WashingMachine extends DomesticAppliance implements Screenable, Plu
      */
     @Override
     public void switchOn() {
-        if(workingStatus = false){
+        if(!workingStatus){
             workingStatus = !workingStatus;
         } else{
             System.out.println("Washing machine is already switched on");
@@ -74,7 +74,7 @@ public class WashingMachine extends DomesticAppliance implements Screenable, Plu
      */
     @Override
     public void switchOff() {
-        if(workingStatus = true){
+        if(workingStatus){
             workingStatus = !workingStatus;
         } else{
             System.out.println("Washing machine is already switched off");

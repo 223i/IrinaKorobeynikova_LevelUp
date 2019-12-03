@@ -42,11 +42,7 @@ public class Cookstove extends ApplianceForCooking implements Screenable {
      */
     @Override
     public boolean hasScreen() {
-        if(!builtInStatus){
-            return false;
-        } else{
-            return true;
-        }
+        return builtInStatus;
     }
 
     @Override

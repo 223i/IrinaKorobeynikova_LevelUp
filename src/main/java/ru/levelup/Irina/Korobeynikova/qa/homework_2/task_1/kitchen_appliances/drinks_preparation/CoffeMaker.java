@@ -48,7 +48,7 @@ public class CoffeMaker extends DomesticAppliance implements Screenable, WiFiabl
      */
     @Override
     public void switchOn() {
-        if(workingStatus = false){
+        if(!workingStatus){
             workingStatus = !workingStatus;
         } else{
             System.out.println("CoffeMaker is already switched on");
@@ -62,7 +62,7 @@ public class CoffeMaker extends DomesticAppliance implements Screenable, WiFiabl
      */
     @Override
     public void switchOff() {
-        if(workingStatus = true){
+        if(workingStatus){
             workingStatus = !workingStatus;
         } else{
             System.out.println("CoffeMaker is already switched off");

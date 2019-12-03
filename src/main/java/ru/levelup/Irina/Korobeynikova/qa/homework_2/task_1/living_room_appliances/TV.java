@@ -50,7 +50,7 @@ public class TV extends DomesticAppliance implements Screenable, WiFiable, PlugI
      */
     @Override
     public void switchOn() {
-        if(workingStatus = false){
+        if(!workingStatus){
             workingStatus = !workingStatus;
         } else{
             System.out.println("TV is already switched on");
@@ -65,7 +65,7 @@ public class TV extends DomesticAppliance implements Screenable, WiFiable, PlugI
      */
     @Override
     public void switchOff() {
-        if(workingStatus = true){
+        if(workingStatus){
             workingStatus = !workingStatus;
         } else{
             System.out.println("TV is already switched off");
