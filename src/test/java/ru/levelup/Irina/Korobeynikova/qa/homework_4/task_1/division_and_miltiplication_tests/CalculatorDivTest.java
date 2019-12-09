@@ -51,7 +51,7 @@ public class CalculatorDivTest extends AbstractBaseTest {
         return new Object[][]{
                 {2L, 2L, 5L},
                 {4L, 5L, 10L},
-                {5L, 0, 2L}
+                {5L, 2L, 3L}
         };
     }
 
@@ -80,7 +80,7 @@ public class CalculatorDivTest extends AbstractBaseTest {
     }
 
     @Test(expectedExceptions = {NumberFormatException.class, ArithmeticException.class})
-    public void zeroDivTest(){
+    public void zeroDivTest() throws NumberFormatException{
         long i = calculator.div(2L,0L);
     }
 }
