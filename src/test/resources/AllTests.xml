@@ -1,0 +1,18 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Suite for all test">
+
+    <test name="Test 1">
+        <classes>
+            <class name="ru.levelup.Irina.Korobeynikova.qa.homework_4.task_1.addition_and_substraction_tests.CalculatorSubTest">
+            </class>
+            <class name="ru.levelup.Irina.Korobeynikova.qa.homework_4.task_1.addition_and_substraction_tests.CalculatorSumTest">
+            </class>
+            <class name="ru.levelup.Irina.Korobeynikova.qa.homework_4.task_1.division_and_miltiplication_tests.CalculatorDivTest">
+            </class>
+            <class name="ru.levelup.Irina.Korobeynikova.qa.homework_4.task_1.division_and_miltiplication_tests.CalculatorMultTest">
+            </class>
+            <class name="ru.levelup.Irina.Korobeynikova.qa.homework_4.task_1.CalculatorPowTest">
+            </class>
+        </classes>
+    </test>
+</suite>

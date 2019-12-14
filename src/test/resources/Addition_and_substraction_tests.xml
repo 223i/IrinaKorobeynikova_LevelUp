@@ -1,0 +1,12 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Suite for addition/Subtraction tests">
+
+    <test name="Test 1">
+        <classes>
+            <class name="ru.levelup.Irina.Korobeynikova.qa.homework_4.task_1.addition_and_substraction_tests.CalculatorSubTest">
+            </class>
+            <class name="ru.levelup.Irina.Korobeynikova.qa.homework_4.task_1.addition_and_substraction_tests.CalculatorSumTest">
+            </class>
+        </classes>
+    </test>
+</suite>
