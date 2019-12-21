@@ -45,8 +45,7 @@ public class AbstractBaseClassSelenium {
         webDriver.findElement(By.linkText("Войти")).click();
         webDriver.findElement(By.name("login")).sendKeys(userEmail);
         webDriver.findElement(By.name("password")).sendKeys(userPassword);
-        webDriver.findElement(By.xpath("/html/body/div[3]/div[1]/div[1]/form/table/tbody/tr[3]/td[2]/input")).click();
-        assertEquals(webDriver.findElement(By.className("dropdown-toggle")).getText(), userName);
+        webDriver.findElement(By.xpath("//input[@value='Авторизоваться']")).click();
     }
 
     /**
@@ -55,6 +54,6 @@ public class AbstractBaseClassSelenium {
      */
     public void logout(WebDriver webDriver){
         webDriver.findElement(By.className("dropdown-toggle")).click();
-        webDriver.findElement(By.cssSelector("#fat-menu > ul > li:nth-child(3) > a")).click();
+        webDriver.findElement(By.linkText("Выход")).click();
     }
 }
