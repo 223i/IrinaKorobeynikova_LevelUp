@@ -29,15 +29,11 @@ public class LoginLogoutTest extends AbstractBaseClassSelenium {
     @Test
     public void loginLogout() {
 
-        WebDriver webDriver = new ChromeDriver();
+        driver.get("http://users.bugred.ru/");
+        assertEquals(driver.getTitle(), "Users");
 
-        webDriver.get("http://users.bugred.ru/");
-        assertEquals(webDriver.getTitle(), "Users");
+        login(driver, USER_MAIL, USER_PASSWORD, USER_NAME);
 
-        login(webDriver, USER_MAIL, USER_PASSWORD, USER_NAME);
-
-        logout(webDriver);
-
-        webDriver.close();
+        logout(driver);
     }
 }
