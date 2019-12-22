@@ -4,8 +4,6 @@
  *
  */
 package homework_6;
-import homework_5.task_1.LoginLogoutTest;
-import homework_5.task_2.AdditionOfNewUserTest;
 
 /**
  * Класс TestSuite предоставляет тест сьют,
