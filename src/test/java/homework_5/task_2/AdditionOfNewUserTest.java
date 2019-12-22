@@ -8,8 +8,6 @@ package homework_5.task_2;
 import homework_5.AbstractBaseClassSelenium;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /**
@@ -33,13 +31,13 @@ public class AdditionOfNewUserTest extends AbstractBaseClassSelenium {
         driver.get("http://users.bugred.ru/");
         assertEquals(driver.getTitle(), "Users");
 
-        login(driver, USER_MAIL, USER_PASSWORD, USER_NAME);
+        login(USER_MAIL, USER_PASSWORD);
 
-        addUser(driver);
+        addNewUser();
 
-        checkNewUser(driver);
+        checkNewUser();
 
-        logout(driver);
+        logout();
     }
 
     /**
@@ -47,16 +45,16 @@ public class AdditionOfNewUserTest extends AbstractBaseClassSelenium {
      * функциональности добавление нового пользователя
      * на сайт.
      */
-    private void addUser(WebDriver webDriver){
-        webDriver.findElement(By.linkText("Пользователи")).click();
-        webDriver.findElement(By.linkText("Добавить пользователя")).click();
-        webDriver.findElement(By.cssSelector("table input[name='noibiz_name']")).sendKeys("NewName");
-        webDriver.findElement(By.cssSelector("table input[name='noibiz_email']")).sendKeys("NewEmail@test.te");
-        webDriver.findElement(By.cssSelector("table input[name='noibiz_password']")).sendKeys("newpassword");
-        webDriver.findElement(By.cssSelector("table input[name='noibiz_birthday']")).sendKeys("31.12.2012");
-        webDriver.findElement(By.cssSelector("table select[name='noibiz_gender']")).click();
-        webDriver.findElement(By.cssSelector("select option[value='m']")).click();
-        webDriver.findElement(By.cssSelector("table input[value='Добавить пользователя']"));
+    private void addNewUser(){
+        driver.findElement(By.linkText("Пользователи")).click();
+        driver.findElement(By.linkText("Добавить пользователя")).click();
+        driver.findElement(By.cssSelector("table input[name='noibiz_name']")).sendKeys("NewName");
+        driver.findElement(By.cssSelector("table input[name='noibiz_email']")).sendKeys("NewEmail@test.te");
+        driver.findElement(By.cssSelector("table input[name='noibiz_password']")).sendKeys("newpassword");
+        driver.findElement(By.cssSelector("table input[name='noibiz_birthday']")).sendKeys("31.12.2012");
+        driver.findElement(By.cssSelector("table select[name='noibiz_gender']")).click();
+        driver.findElement(By.cssSelector("select option[value='m']")).click();
+        driver.findElement(By.cssSelector("table input[value='Добавить пользователя']"));
     }
 
     /**
@@ -65,10 +63,10 @@ public class AdditionOfNewUserTest extends AbstractBaseClassSelenium {
      * он там не появляется:(
      *
      */
-    private void checkNewUser(WebDriver webDriver){
-        webDriver.findElement(By.linkText("Пользователи")).click();  //открыть страницу пользователи
-        webDriver.findElement(By.cssSelector("table input[placeholder='Введите email или имя']")).sendKeys("NewEmail@test.te");
-        webDriver.findElement(By.cssSelector("table button[type='submit']")).click();
+    private void checkNewUser(){
+        driver.findElement(By.linkText("Пользователи")).click();  //открыть страницу пользователи
+        driver.findElement(By.cssSelector("table input[placeholder='Введите email или имя']")).sendKeys("NewEmail@test.te");
+        driver.findElement(By.cssSelector("table button[type='submit']")).click();
 
     }
 }

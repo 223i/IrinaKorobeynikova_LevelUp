@@ -7,8 +7,6 @@
 package homework_5.task_1;
 import homework_5.AbstractBaseClassSelenium;
 import org.junit.jupiter.api.Test;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /**
@@ -32,8 +30,8 @@ public class LoginLogoutTest extends AbstractBaseClassSelenium {
         driver.get("http://users.bugred.ru/");
         assertEquals(driver.getTitle(), "Users");
 
-        login(driver, USER_MAIL, USER_PASSWORD, USER_NAME);
+        login(USER_MAIL, USER_PASSWORD);
 
-        logout(driver);
+        logout();
     }
 }

@@ -12,10 +12,8 @@ import org.junit.jupiter.api.BeforeEach;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-
 import java.util.concurrent.TimeUnit;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /**
  * Aбстрактный класс AbstractBaseClassSelenium и содержит
@@ -56,20 +54,20 @@ public class AbstractBaseClassSelenium {
      * Метод login отвечает за тестирование
      * функциональности входа на сайт.
      */
-    public void login(WebDriver webDriver, String userEmail, String userPassword, String userName){
+    public void login(String userEmail, String userPassword){
 
-        webDriver.findElement(By.linkText("Войти")).click();
-        webDriver.findElement(By.name("login")).sendKeys(userEmail);
-        webDriver.findElement(By.name("password")).sendKeys(userPassword);
-        webDriver.findElement(By.xpath("//input[@value='Авторизоваться']")).click();
+        driver.findElement(By.linkText("Войти")).click();
+        driver.findElement(By.name("login")).sendKeys(userEmail);
+        driver.findElement(By.name("password")).sendKeys(userPassword);
+        driver.findElement(By.xpath("//input[@value='Авторизоваться']")).click();
     }
 
     /**
      * Метод logout отвечает за тестирование
      * функциональности выхода с сайта.
      */
-    public void logout(WebDriver webDriver){
-        webDriver.findElement(By.className("dropdown-toggle")).click();
-        webDriver.findElement(By.linkText("Выход")).click();
+    public void logout(){
+        driver.findElement(By.className("dropdown-toggle")).click();
+        driver.findElement(By.linkText("Выход")).click();
     }
 }
