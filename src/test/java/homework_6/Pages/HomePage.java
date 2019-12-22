@@ -106,7 +106,7 @@ public class HomePage extends AbstractBaseClassSelenium {
      */
     public HomePage checkNewUser(){
         usersButton.click();
-        searchBar.sendKeys("NewEmail@test.te");
+        searchBar.sendKeys(NEW_USER_MAIL);
         searchButton.click();
         return new HomePage(driver);
     }
